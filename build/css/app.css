@@ -371,7 +371,7 @@ img {
   color: #ffffff;
   text-align: center;
 }
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .header h1 {
     margin: 0;
   }
@@ -379,7 +379,7 @@ img {
 .header .contenido-header {
   padding: 1rem;
 }
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .header .contenido-header {
     display: flex;
     justify-content: space-between;
@@ -387,7 +387,7 @@ img {
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .nav-principal {
     display: flex;
     gap: 2rem;
@@ -400,7 +400,7 @@ img {
   text-align: center;
   margin-bottom: 1rem;
 }
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .nav-principal a {
     margin: 0;
   }
@@ -455,7 +455,7 @@ img {
 .sobre-festival {
   padding: 5rem 0;
 }
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .sobre-festival {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
