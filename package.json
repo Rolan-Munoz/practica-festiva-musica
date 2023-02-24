@@ -1,7 +1,7 @@
 {
   "name": "festivalmusica_inicio",
   "version": "1.0.0",
-  "description": "project whith gulp SASS y HTML",
+  "description": "project whith gulp SASS & HTML",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
@@ -12,10 +12,11 @@
     "Gulp",
     "HTML"
   ],
-  "author": "Rolan Munoz",
+  "author": "Rolan Muñoz",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
     "gulp-cache": "^1.1.3",
     "gulp-cli": "^2.3.0",
     "gulp-imagemin": "^7.1.0",

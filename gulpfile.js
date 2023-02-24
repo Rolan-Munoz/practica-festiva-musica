@@ -9,6 +9,7 @@ const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 async function css () {
 
@@ -29,7 +30,6 @@ async function imagenes () {
 }
 
 async function imgWebp () {
-
     const opciones = {
         quality: 50
     };
@@ -38,6 +38,14 @@ async function imgWebp () {
         .pipe(dest('build/img'));
 };
 
+async function imgAvif () {
+    const opciones = {
+        quality: 50
+    };
+    src('src/img/**/*.{png,jpg}')
+        .pipe(avif(opciones))
+        .pipe(dest('build/img'));
+};
 
 async function dev() {
     watch('src/scss/**/*.scss', css) //con watch escuchamos los cambios producidos  y luego ejecutamos css
@@ -47,5 +55,6 @@ async function dev() {
 exports.css = css;  // se llama a la funcion a traves de node js por eso la sintaxis diferente a js
 exports.imagenes = imagenes;
 exports.imgWebp = imgWebp;
-exports.dev = parallel(imagenes, imgWebp, dev);
+exports.imgAvif = imgAvif;
+exports.dev = parallel(imagenes, imgWebp, imgAvif, dev);
 
